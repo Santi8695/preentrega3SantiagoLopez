@@ -1,0 +1,1326 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Body */
+body {
+    background-image: linear-gradient(to bottom right, #C38154, #d47f47d3);
+}
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "hero"
+        "lista"
+        "subDisco"
+        "disco"
+        "subRopa"
+        "ropa"
+        "subPosters"
+        "posters"
+        "encargo"
+        "footer";
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+
+/* Estilos Header */
+header {
+    background-color: #884a39;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    grid-area: header;
+    text-align: center;
+}
+
+header a img {
+    width: 60%;
+}
+
+header nav ul {
+    padding-right: 16px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-right: 0;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    padding: 4px;
+    background-color: #C38154;
+    transition: ease-in-out 0.2s;
+}
+
+.lista ul li a:hover {
+    color: #fff;
+    background-color: #884a39;
+    padding: 4px;
+    transition: ease-in-out 0.2s;
+}
+
+.ul__li--tamaño {
+    font-family: Montserrat;
+    font-size: 0.9rem;
+}
+
+span.ico {
+    height: 10px;
+    width: 10px;
+}
+
+.menuHamurguesa {
+    color: white;
+}
+
+.menuHamurguesa,
+.button__nav--border {
+    border: none;
+}
+
+.button__nav--border:hover {
+    background-color: #C38154;
+    transition: 0.2s;
+}
+
+.button__nav--border:focus {
+    transform: rotate(90deg);
+    transition: 1s;
+    margin: auto;
+}
+
+
+/*Estilos de la hero section (Carrusel de imagenes)*/
+.hero {
+    width: 100%;
+    height: 200px;
+    grid-area: hero;
+    margin-top: -6px;
+}
+
+.hero img {
+    height: 200px;
+    width: 100%;
+}
+
+.textos {
+    display: none
+}
+
+
+/*Distribucion de Catalogo*/
+
+/*Formulario de encargo de disco*/
+.encargoDisco {
+    grid-area: encargo;
+    max-width: 440px;
+    margin: 8px;
+    background-color: #DBA966;
+    border: 2px solid black;
+    z-index: 4;
+}
+
+.encargoDisco h2 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.encargoDisco form {
+    display: flex;
+    flex-direction: column;
+}
+
+.encargoDisco label {
+    font-size: 1rem;
+    margin: 4px 8px 0 0;
+    justify-content: center;
+    align-items: center;
+    text-align: end;
+}
+
+.encargoDisco input {
+    margin: 0 8px 4px 0;
+    height: 32px;
+}
+
+.encargoDisco input:hover {
+    border: 2px solid rgb(224, 108, 0);
+}
+
+.encargoDisco input:focus:placeholder-shown {
+    background-color: #ffd4abe7;
+}
+
+/*Distribucion interna del formulario y estilos de los botones*/
+.elemento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.botones button {
+    padding: 4px;
+    margin: 4px 12px 4px 0;
+    border-radius: 20px;
+}
+
+.botones button:hover {
+    transform: translate(0px, -4px);
+    box-shadow: 0px 6px 10px #b16400;
+}
+
+.botones button:active {
+    background-color: rgb(211, 211, 211);
+}
+
+
+/*Estilos Flecha (para regresar a arriba de la pagina)*/
+.flechaSubir {
+    display: none;
+}
+
+
+/*Estilos de la lista que actua como indice del catalogo*/
+.lista {
+    grid-area: lista;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DBA966;
+    border: 2px solid black;
+    margin: 0 8px;
+}
+
+.lista ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 16px;
+}
+
+.lista ul li {
+    font-size: 1.5rem;
+}
+
+.lista ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Estilos subtitulos que encabezan elementos del catalogo*/
+.subtituloDisco,
+.subtituloRopa,
+.subtituloPosters {
+    background-color: #884A39;
+    color: white;
+    border: 2px solid black;
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+    margin: 0 4px;
+}
+
+.subtituloDisco {
+    grid-area: subDisco;
+}
+
+.catalogo {
+    grid-area: disco;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.tarjetaDisco {
+    background-color: #ffbd66;
+    display: inline-block;
+    border-radius: 12px;
+    height: 324px;
+    width: 240px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 8px auto;
+}
+
+.tarjetaDisco:hover {
+    background-color: #f0b537e0;
+    box-shadow: 0px 16px 10px rgb(218, 99, 20);
+    border: 4px solid rgb(255, 255, 255);
+    transform: scale(1.2, 1.2);
+    margin: 7vh auto;
+    transition: .5s;
+}
+
+.tarjetaDisco img {
+    width: 100%;
+    height: 180px;
+    padding: 8px 16px;
+}
+
+.tarjetaDisco h4 {
+    font-size: 1.6rem;
+}
+
+.tarjetaDisco p {
+    font-size: 1.2rem;
+}
+
+.tarjetaDisco .precio {
+    color: rgb(255, 0, 0);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.subtituloRopa {
+    grid-area: subRopa;
+}
+
+.ropa {
+    grid-area: ropa;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.subtituloPosters {
+    grid-area: subPosters;
+}
+
+.posters {
+    grid-area: posters;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Estilos Footer*/
+footer {
+    margin-top: 16px;
+    grid-area: footer;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #884a39;
+}
+
+footer p {
+    color: white;
+    padding: 12px 0 0 4px;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+footer .redesSociales a img {
+    width: 28px;
+    padding-right: 4px;
+}
+
+
+/*Estilos de la pagina de Artistas Vinculados*/
+h1.subtitulo {
+    background-color: #884A39;
+    color: white;
+    font-size: 3rem;
+    font-family: Montserrat;
+    text-align: center;
+    margin: 8px 16px;
+    border: 2px solid black;
+}
+
+.nombreArtista h2 {
+    background-color: #DBA966;
+    padding: 8px;
+    border: 2px solid black;
+    width: 400px;
+    text-align: center;
+    margin: 8px;
+}
+
+.nombreArtista img {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    align-items: center;
+    margin: -8px 8px 8px;
+}
+
+.subtitulos {
+    background-color: #DBA966;
+    border: 2px solid black;
+    margin: 8px 16px;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.informacion p {
+    background-color: #FFBD66;
+    border: 2px solid black;
+    margin: -10px 16px 2px 16px;
+    padding: 16px;
+}
+
+.informacion .grupos,
+.informacion .artistasRelacionados {
+    margin: 8px 0;
+    display: inline-block;
+}
+
+.discografiaLista ul {
+    background-color: #FFBD66;
+    list-style: none;
+    border: 2px solid black;
+    margin: -12px 16px 0 16px;
+    padding: 8px;
+}
+
+.discografiaLista ul li {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.redesSocialesArtista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #FFBD66;
+    margin: -12px 16px 8px 16px;
+    border: 2px solid black;
+}
+
+.redesSocialesArtista a img {
+    padding: 8px;
+    width: 60px;
+    height: 60px;
+}
+
+
+.albumes h3.subtitulos {
+    display: none;
+}
+
+.discosSpotify ul {
+    display: none;
+}
+
+/*Estilos Galeria*/
+.vid {
+    width: 100%;
+    height: 200px;
+    margin: 8px auto;
+}
+
+.contenedorFotos,
+.contenedorVideos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.logoPgLang,
+.logoHillbillies {
+    display: none;
+}
+
+.contenedorFotos img {
+    background-color: #FFBD66;
+    border: 2px solid black;
+    border-radius: 5%;
+    padding: 8px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.contenedorVideos video {
+    background-color: #FFBD66;
+    border: 2px solid black;
+    border-radius: 5%;
+    padding: 8px;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+/*Estilos Sobre Nosotros*/
+
+.historia,
+.horarios,
+.ubicacion {
+    display: inline-block;
+    background-color: #ffbd66;
+    text-align: center;
+    margin: 24px;
+}
+
+.historia {
+    border: 2px solid black;
+}
+
+.subtitulosSobreNosotros {
+    background-color: #DBA966;
+    margin: 0;
+    padding: 16px;
+    border-bottom: 2px solid black;
+}
+
+.subtitulosSobreNosotrosHor {
+    background-color: #DBA966;
+    margin: 0px;
+    padding: 8px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.subtitulosSobreNosotrosUbi {
+    background-color: #DBA966;
+    margin: 0;
+    border: 2px solid black;
+}
+
+.historia p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 8px;
+}
+
+.historia p .musicTrip {
+    color: #d66800;
+    font-weight: bolder;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+.historia p .destacado {
+    color: #000000;
+    font-weight: bolder;
+    font-family: Montserrat;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+table {
+    border: 2px solid black;
+    margin: auto;
+    width: 300px;
+
+}
+
+table tr td {
+    border: 1px solid black;
+    fill: black;
+    text-align: center;
+    padding: 2px;
+    font-size: 0.6rem;
+}
+
+.ubicacion {
+    display: grid;
+}
+
+.ubicacion iframe {
+    width: 100%;
+    height: 300px
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan h3 {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.slogan h4 {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+img.imgSobreNosotros {
+    width: 340px;
+    height: 300px;
+    border: 2px solid #FFBD66;
+    margin: auto;
+}
+
+/*Estilos Contactanos*/
+
+.distribucionContacto .subtituloContacto {
+    background-color: #884A39;
+    margin: 16px;
+    padding: 8px;
+    border: 2px solid black;
+    color: white;
+}
+
+.distribucionContacto .subtituloContacto h1 {
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.distribucionContacto .subtituloContacto h2 {
+    text-align: center;
+    justify-content: center;
+    color: orange;
+    font-size: 3rem;
+}
+
+.distribucionContacto form {
+    margin: auto;
+    width: fit-content;
+    max-width: 420px;
+    background: #DBA966;
+    padding: 16px;
+    border: 2px solid black;
+    margin-bottom: 201px;
+}
+
+.distribucionContacto .elemento {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    margin-top: 20px;
+}
+
+.distribucionContacto label {
+    margin: auto;
+}
+
+.distribucionContacto input {
+    letter-spacing: .5px;
+    height: 56px;
+    padding: 16px;
+    background: #FFFFFF;
+    flex-basis: 74%;
+    border-radius: 4px;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 5px;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-right: 20px;
+}
+
+.distribucionContacto .area {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    margin-top: 20px;
+}
+
+.distribucionContacto textarea {
+    min-height: 100px;
+    max-height: 200px;
+    flex-basis: 100%;
+    resize: vertical;
+    padding: 16px;
+    margin: 5px;
+    grid-column: 2;
+    margin-right: 20px;
+}
+
+.distribucionContacto .botones {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.distribucionContacto .botones button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    height: 40px;
+    border-radius: 20px;
+    margin: 4px 24px 24px 2px;
+    padding: 0 24px;
+}
+
+.distribucionContacto input:focus,
+.distribucionContacto textarea:focus {
+    background-color: #ffd4abe7;
+}
+
+.distribucionContacto input:hover,
+.distribucionContacto textarea:hover {
+    border: solid 2px rgb(0, 0, 0);
+}
+
+.distribucionContacto input:placeholder-shown {
+    border: 1px solid gray;
+}
+
+.distribucionContacto input:placeholder-shown:hover {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/*MEDIA QUERIES*/
+
+/*Catalogo*/
+@media (min-width:600px) {
+    /*Estilos Catalogo*/
+
+    #grilla {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "hero hero"
+            "lista lista"
+            "subDisco subDisco"
+            "disco disco"
+            "subRopa subRopa"
+            "ropa ropa"
+            "subPosters subPosters"
+            "posters posters"
+            "encargo encargo"
+            "footer footer";
+    }
+
+    /*Estilos de la hero section (Carrusel de imagenes)*/
+    .hero {
+        height: 300px;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    /*Distribucion de Catalogo*/
+
+    /*Formulario de encargo de disco*/
+    .encargoDisco {
+        margin: auto;
+    }
+
+    .encargoDisco label {
+        font-size: 1.2rem;
+    }
+
+    .encargoDisco input {
+        height: 38px;
+    }
+
+    /*estilos del catalogo*/
+    /*Seccion discos*/
+    .catalogo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tarjetaDisco h4 {
+        font-size: 1.5rem;
+    }
+
+    .tarjetaDisco p {
+        font-size: 1.3rem;
+    }
+
+    .tarjetaDisco .precio {
+        font-size: 1.1rem;
+    }
+
+    /* Seccion Ropa*/
+    .ropa {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .posters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Estilos Footer*/
+
+    footer div.redesSociales a img {
+        width: 40px;
+        padding-right: 8px;
+    }
+
+    /*Estilos Artistas Vinculados*/
+    h1.subtitulo {
+        background-color: #884A39;
+        color: white;
+        font-size: 3rem;
+        font-family: Montserrat;
+        text-align: center;
+        margin: 8px 16px;
+        border: 2px solid black;
+    }
+
+    .nombreArtista h2 {
+        background-color: #DBA966;
+        padding: 8px;
+        border: 2px solid black;
+        width: 400px;
+        text-align: center;
+        margin: 8px;
+    }
+
+    .nombreArtista img {
+        width: 400px;
+        height: 400px;
+        border: 2px solid black;
+        align-items: center;
+        margin: -8px 8px 8px;
+    }
+
+    .subtitulos {
+        background-color: #DBA966;
+        border: 2px solid black;
+        margin: 8px 16px;
+        padding: 8px;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .informacion p {
+        background-color: #FFBD66;
+        border: 2px solid black;
+        margin: -10px 16px 2px 16px;
+        padding: 16px;
+    }
+
+    .informacion .grupos,
+    .informacion .artistasRelacionados {
+        margin: 8px 0;
+        display: inline-block;
+    }
+
+    .discografiaLista ul {
+        background-color: #FFBD66;
+        list-style: none;
+        border: 2px solid black;
+        margin: -12px 16px 0 16px;
+        padding: 8px;
+    }
+
+    .discografiaLista ul li {
+        padding-top: 8px;
+        text-align: center;
+    }
+
+    .redesSocialesArtista {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #FFBD66;
+        margin: -12px 16px 8px 16px;
+        border: 2px solid black;
+    }
+
+    .redesSocialesArtista a img {
+        padding: 8px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .albumes {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .albumes h3.subtitulos {
+        display: none;
+    }
+
+    .albumes h3.subtitulos {
+        background-color: #DBA966;
+        display: block;
+    }
+
+    .discosSpotify ul {
+        display: inline-block;
+        background-color: #FFBD66;
+        list-style: none;
+        padding-left: 0px;
+        margin: auto;
+        border: 2px solid black;
+    }
+
+    .discosSpotify ul li {
+        display: flex;
+        background-color: #FFBD66;
+        margin: 20px;
+    }
+
+    /*Media Query Estilos Galeria*/
+    .vid {
+        height: 450px;
+    }
+
+    .contenedorFotos,
+    .contenedorVideos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedorFotos img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contenedorVideos video {
+        width: 350px;
+        height: 250px;
+    }
+
+
+}
+
+@media (min-width:1024px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "lista lista lista"
+            "subDisco subDisco subDisco"
+            "disco disco disco"
+            "subRopa subRopa subRopa"
+            "ropa ropa ropa"
+            "subPosters subPosters subPosters"
+            "posters posters posters"
+            "encargo encargo encargo"
+            "footer footer footer";
+    }
+
+    /*Estilos header*/
+    header {
+        flex-direction: row;
+    }
+
+    /*Estilos de la hero section (Carrusel de imagenes)*/
+    .hero {
+        height: 400px;
+    }
+
+    .hero img {
+        height: 400px;
+    }
+
+    .textos {
+        display: inline-block;
+        position: absolute;
+        top: 110px;
+        left: 30px;
+        text-align: center;
+        color: white;
+    }
+
+    .textos h1 {
+        font-size: 2.2rem;
+    }
+
+    .textos span {
+        display: block;
+    }
+
+    span.nombrePag {
+        color: #FF8800;
+        display: inline;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /*Estilos flecha subir*/
+    .flechaSubir {
+        display: inline-block;
+        grid-area: flecha;
+        position: fixed;
+        bottom: 60px;
+        margin-left: 6px;
+    }
+
+    .flecha {
+        width: 60px;
+        height: 60px;
+    }
+
+    /*Distribucion de Catalogo*/
+    /*Seccion discos*/
+    .catalogo {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Seccion Ropa*/
+    .ropa {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .posters {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /*Media Query Estilos Galeria*/
+    .vid {
+        height: 600px;
+    }
+
+    .contenedorFotos,
+    .contenedorVideos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logoHillbillies {
+        display: inline-block;
+    }
+
+    .logoPgLang {
+        display: inline-block;
+        background-color: #FFBD66;
+        border: 2px solid black;
+        border-radius: 5%;
+        padding: 8px;
+        width: 350px;
+        height: 250px;
+        margin: auto;
+    }
+}
+
+.contenedorFotos img {
+    width: 350px;
+    height: 350px;
+}
+
+.contenedorVideos video {
+    width: 350px;
+    height: 250px;
+}
+
+
+
+
+@media (min-width:1600px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "encargo lista lista"
+            "flecha subDisco subDisco"
+            "flecha disco disco"
+            "flecha subRopa subRopa"
+            "flecha ropa ropa"
+            "flecha subPosters subPosters"
+            "flecha posters posters"
+            "footer footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 12px;
+    }
+
+    /* Estilos Header */
+    header {
+        background-color: #884a39;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+        grid-area: header;
+    }
+
+    header a img {
+        width: 45%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 24px;
+        padding-right: 16px;
+        list-style: none;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+    }
+
+    .ul__li--tamaño {
+        font-family: Montserrat;
+        font-size: 0.9rem;
+    }
+
+    span.ico {
+        height: 10px;
+        width: 10px;
+    }
+
+    .menuHamurguesa {
+        color: white;
+    }
+
+    .menuHamurguesa,
+    .button__nav--border {
+        border: none;
+    }
+
+    /*Estilos de la hero section (Carrusel de imagenes)*/
+    .hero {
+        height: 600px;
+        margin-top: -12px;
+        grid-area: hero;
+    }
+
+    .hero img {
+        height: 600px;
+    }
+
+    .textos {
+        display: inline-block;
+        position: absolute;
+        top: 185px;
+        left: 190px;
+        text-align: center;
+        color: white;
+    }
+
+    .textos h1 {
+        font-size: 3rem;
+    }
+
+    .textos span {
+        display: block;
+    }
+
+    span.nombrePag {
+        color: #FF8800;
+        display: inline;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /*Distribucion de Catalogo*/
+    /*Formulario de encargo de disco*/
+    .encargoDisco {
+        grid-area: encargo;
+        position: sticky;
+        top: 400px;
+        max-width: 440px;
+        margin-left: 8px;
+        padding: 16px;
+        background-color: #DBA966;
+        border: 2px solid black;
+        z-index: 4;
+    }
+
+    .encargoDisco h2 {
+        font-size: 2rem;
+    }
+
+    .encargoDisco form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .encargoDisco label {
+        font-size: 1.1rem;
+        margin: 0 4px 4px 0;
+        justify-content: center;
+        text-align: end;
+    }
+
+    .encargoDisco input {
+        margin: 0 4px 4px 0;
+        height: 32px;
+    }
+
+    /*Distribucion interna del formulario y estilos de los botones*/
+    .elemento {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    .botones button {
+        padding: 6px;
+        margin: 16px 4px 0 0;
+        border-radius: 20px;
+    }
+
+
+    /*Estilos Flecha (para regresar a arriba de la pagina)*/
+    .flechaSubir {
+        grid-area: flecha;
+        position: fixed;
+        bottom: 100px;
+        margin-left: 16px;
+    }
+
+    .flecha {
+        width: 60px;
+        height: 60px;
+    }
+
+    /*Estilos de la lista que actua como indice del catalogo*/
+    .lista {
+        grid-area: lista;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+        margin-right: 16px;
+    }
+
+    .lista ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        text-align: end;
+    }
+
+    .lista ul li {
+        font-size: 1.5rem;
+
+    }
+
+    .lista ul li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /*Estilos subtitulos que encabezan elementos del catalogo*/
+    .subtituloDisco,
+    .subtituloRopa,
+    .subtituloPosters {
+        background-color: #884A39;
+        color: white;
+        border: 2px solid black;
+        font-size: 2rem;
+        text-align: center;
+        padding: 16px;
+        margin-right: 16px;
+    }
+
+    .subtituloDisco {
+        grid-area: subDisco;
+    }
+
+    .catalogo {
+        grid-area: disco;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    .tarjetaDisco {
+        margin: 0 0 24px 52px;
+    }
+
+    .tarjetaDisco:hover {
+        transform: scale(1.2, 1.2);
+        margin: 3vh auto 8vh auto;
+        transition: .5s;
+    }
+
+    .tarjetaDisco img {
+        width: 100%;
+        height: 180px;
+        padding: 12px;
+    }
+
+    div.distribucion section.discos article img {
+        width: 240px;
+        height: 180px;
+        padding: 8px;
+    }
+
+    .subtituloRopa {
+        grid-area: subRopa;
+    }
+
+    .ropa {
+        grid-area: ropa;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .subtituloPosters {
+        grid-area: subPosters;
+    }
+
+    .posters {
+        grid-area: posters;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+
+    /*Media Query Estilos Galeria*/
+    .vid {
+        height: 600px;
+    }
+
+    .contenedorFotos,
+    .contenedorVideos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .logoHillbillies,
+    .logoPgLang {
+        display: none;
+    }
+
+    .contenedorFotos img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contenedorVideos video {
+        width: 350px;
+        height: 250px;
+    }
+
+    /* Estilos Footer*/
+    footer {
+        margin-top: 16px;
+        grid-area: footer;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #884a39;
+    }
+
+    footer p {
+        color: white;
+        padding: 12px 0 0 4px;
+        align-items: center;
+    }
+
+    footer div.redesSociales a img {
+        width: 34px;
+        padding-right: 8px;
+    }
+}
