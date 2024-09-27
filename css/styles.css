@@ -38,6 +38,7 @@ header {
     padding: 4px;
     grid-area: header;
     text-align: center;
+    margin-bottom: 6px;
 }
 
 header a img {
@@ -417,7 +418,7 @@ h1.subtitulo {
 }
 
 
-.albumes h3.subtitulos {
+.discosSpotify h3.subtitulos {
     display: none;
 }
 
@@ -725,7 +726,9 @@ img.imgSobreNosotros {
 
     /*estilos del catalogo*/
     /*Secciones discos, ropa y posters*/
-    .catalogo, .ropa, .posters {
+    .catalogo,
+    .ropa,
+    .posters {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -826,18 +829,19 @@ img.imgSobreNosotros {
         height: 60px;
     }
 
-    .albumes {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    .albumes h3.subtitulos {
+    .discosSpotify h3.subtitulos {
         display: none;
     }
 
-    .albumes h3.subtitulos {
+    .discosSpotify h3.subtitulos {
         background-color: #DBA966;
         display: block;
+    }
+
+    .discosSpotify {
+        display: flex;
+        flex-direction: column;
+        
     }
 
     .discosSpotify ul {
@@ -998,7 +1002,9 @@ img.imgSobreNosotros {
 
     /*Distribucion de Catalogo*/
     /*Secciones discos, ropa y posters*/
-    .catalogo, .ropa, .posters {
+    .catalogo,
+    .ropa,
+    .posters {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -1038,11 +1044,11 @@ img.imgSobreNosotros {
     height: 250px;
 }
 
- /*Estilos Sobre Nosotros*/
+/*Estilos Sobre Nosotros*/
 
- .horarios {
+.horarios {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     margin: 0 auto;
 }
 
@@ -1151,23 +1157,11 @@ img.imgSobreNosotros {
     /*Estilos de la hero section (Carrusel de imagenes)*/
     .hero {
         height: 600px;
-        margin-top: -12px;
         grid-area: hero;
     }
 
     .hero img {
         height: 600px;
-    }
-
-    .heroEspecial {
-            height: 600px;
-            margin-top: 0;
-            grid-area: hero;
-    }
-
-    .heroEspecial img {
-        height: 600px;
-        width: 100%;
     }
 
     .textos {
