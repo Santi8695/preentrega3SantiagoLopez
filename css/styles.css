@@ -42,6 +42,7 @@ header {
 
 header a img {
     width: 60%;
+    padding: 4px;
 }
 
 header nav ul {
@@ -723,9 +724,9 @@ img.imgSobreNosotros {
     }
 
     /*estilos del catalogo*/
-    /*Seccion discos*/
-    .catalogo {
-        grid-template-columns: 1fr 1fr;
+    /*Secciones discos, ropa y posters*/
+    .catalogo, .ropa, .posters {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .tarjetaDisco h4 {
@@ -738,15 +739,6 @@ img.imgSobreNosotros {
 
     .tarjetaDisco .precio {
         font-size: 1.1rem;
-    }
-
-    /* Seccion Ropa*/
-    .ropa {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .posters {
-        grid-template-columns: 1fr 1fr;
     }
 
     /* Estilos Footer*/
@@ -864,6 +856,7 @@ img.imgSobreNosotros {
     }
 
     /*Media Query Estilos Galeria*/
+
     .vid {
         height: 450px;
     }
@@ -884,6 +877,54 @@ img.imgSobreNosotros {
     }
 
 
+    /*Estilos Sobre Nosotros*/
+
+    .horarios {
+        display: flex;
+        flex-direction: column;
+        margin: 2px auto;
+        width: 90%;
+    }
+
+
+    .historia p {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+
+    .historia p span.musicTrip {
+        font-size: 1rem;
+    }
+
+    .historia p .destacado {
+        font-size: 0.9rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table tr td {
+        padding: 4px;
+        font-size: 1rem;
+    }
+
+    .ubicacion {
+        display: grid;
+    }
+
+    .slogan h3 {
+        font-size: 2.2rem;
+    }
+
+    .slogan h4 {
+        font-size: 1.8rem;
+    }
+
+    img.imgSobreNosotros {
+        width: 460px;
+        height: 380px;
+    }
 }
 
 @media (min-width:1024px) {
@@ -956,18 +997,9 @@ img.imgSobreNosotros {
     }
 
     /*Distribucion de Catalogo*/
-    /*Seccion discos*/
-    .catalogo {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    /* Seccion Ropa*/
-    .ropa {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .posters {
-        grid-template-columns: 1fr 1fr 1fr;
+    /*Secciones discos, ropa y posters*/
+    .catalogo, .ropa, .posters {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /*Media Query Estilos Galeria*/
@@ -1006,7 +1038,49 @@ img.imgSobreNosotros {
     height: 250px;
 }
 
+ /*Estilos Sobre Nosotros*/
 
+ .horarios {
+    display: flex;
+    flex-direction: column; 
+    margin: 0 auto;
+}
+
+
+.historia p {
+    padding: 8px;
+    font-size: 1.4rem;
+}
+
+.historia p span.musicTrip {
+    font-size: 1.3rem;
+}
+
+.historia p .destacado {
+    font-size: 19px;
+}
+
+table tr td {
+    padding: 4px;
+    font-size: 1.3em;
+}
+
+.ubicacion {
+    display: grid;
+}
+
+.slogan h3 {
+    font-size: 2.4rem;
+}
+
+.slogan h4 {
+    font-size: 2rem;
+}
+
+img.imgSobreNosotros {
+    width: 500px;
+    height: 420px;
+}
 
 
 @media (min-width:1600px) {
@@ -1038,6 +1112,7 @@ img.imgSobreNosotros {
     }
 
     header a img {
+        padding: 4px;
         width: 45%;
     }
 
@@ -1082,6 +1157,17 @@ img.imgSobreNosotros {
 
     .hero img {
         height: 600px;
+    }
+
+    .heroEspecial {
+            height: 600px;
+            margin-top: 0;
+            grid-area: hero;
+    }
+
+    .heroEspecial img {
+        height: 600px;
+        width: 100%;
     }
 
     .textos {
