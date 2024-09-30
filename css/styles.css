@@ -206,7 +206,7 @@ footer .redesSociales a img {
   grid-area: encargo;
   max-width: 440px;
   margin: 8px;
-  background-color: #DBA966;
+  background-color: #dba966;
   border: 2px solid black;
   z-index: 4;
 }
@@ -272,7 +272,7 @@ footer .redesSociales a img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #DBA966;
+  background-color: #dba966;
   border: 2px solid black;
   margin: 0 8px;
 }
@@ -303,7 +303,7 @@ footer .redesSociales a img {
 .subtituloDisco,
 .subtituloRopa,
 .subtituloPosters {
-  background-color: #884A39;
+  background-color: #884a39;
   color: white;
   border: 2px solid black;
   font-size: 2rem;
@@ -325,7 +325,7 @@ footer .redesSociales a img {
 
 /*Estilos de las tarjetas del Catalogo*/
 .tarjetaDisco {
-  background-color: #ffbd66;
+  background-color: #FFBD66;
   display: inline-block;
   border-radius: 12px;
   height: 324px;
@@ -525,7 +525,7 @@ footer .redesSociales a img {
     max-width: 440px;
     margin-left: 8px;
     padding: 16px;
-    background-color: #DBA966;
+    background-color: #dba966;
     border: 2px solid black;
     z-index: 4;
   }
@@ -578,7 +578,7 @@ footer .redesSociales a img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #DBA966;
+    background-color: #dba966;
     border: 2px solid black;
     margin-right: 16px;
   }
@@ -601,7 +601,7 @@ footer .redesSociales a img {
   .subtituloDisco,
   .subtituloRopa,
   .subtituloPosters {
-    background-color: #884A39;
+    background-color: #884a39;
     color: white;
     border: 2px solid black;
     font-size: 2rem;
@@ -659,7 +659,7 @@ footer .redesSociales a img {
 /*| Estilos de la pagina de Artistas Vinculados |*/
 /*----------------------------------------------*/
 h1.subtitulo {
-  background-color: #884A39;
+  background-color: #884a39;
   color: white;
   font-size: 3rem;
   font-family: Montserrat;
@@ -669,7 +669,7 @@ h1.subtitulo {
 }
 
 .subtitulos {
-  background-color: #DBA966;
+  background-color: #dba966;
   border: 2px solid black;
   margin: 8px 16px;
   padding: 8px;
@@ -683,7 +683,7 @@ h1.subtitulo {
   flex-direction: column;
 }
 .fichaArtista h2 {
-  background-color: #DBA966;
+  background-color: #dba966;
   border: 2px solid black;
   border-bottom: 0;
   text-align: center;
@@ -749,7 +749,7 @@ h1.subtitulo {
 @media (min-width: 600px) {
   /*Nombre y Foto del Artista*/
   .fichaArtista h2 {
-    background-color: #DBA966;
+    background-color: #dba966;
     border: 2px solid black;
     border-bottom: 0;
     text-align: center;
@@ -1017,7 +1017,7 @@ h1.subtitulo {
 .horarios,
 .ubicacion {
   display: inline-block;
-  background-color: #ffbd66;
+  background-color: #FFBD66;
   text-align: center;
   margin: 24px;
 }
@@ -1045,7 +1045,7 @@ h1.subtitulo {
 
 /*subtitulo que acompaña la historia de la pagina*/
 .subtitulosSobreNosotros {
-  background-color: #DBA966;
+  background-color: #dba966;
   margin: 0;
   padding: 16px;
   border-bottom: 2px solid black;
@@ -1053,7 +1053,7 @@ h1.subtitulo {
 
 /*subtitulo que acompaña la tabla de horarios*/
 .subtitulosSobreNosotrosHor {
-  background-color: #DBA966;
+  background-color: #dba966;
   margin: 0px;
   padding: 8px;
   border-left: 2px solid black;
@@ -1063,7 +1063,7 @@ h1.subtitulo {
 
 /*subtitulo que acompaña la ubicacion*/
 .subtitulosSobreNosotrosUbi {
-  background-color: #DBA966;
+  background-color: #dba966;
   margin: 0;
   border: 2px solid black;
 }
@@ -1190,7 +1190,7 @@ table tr td {
 /*Esto incluye titulos, el formulario y la distribucion de los elementos 
 internos del formulario ademas de su estilo*/
 .distribucionContacto .subtituloContacto {
-  background-color: #884A39;
+  background-color: #884a39;
   margin: 16px;
   padding: 8px;
   border: 2px solid black;
@@ -1211,7 +1211,7 @@ internos del formulario ademas de su estilo*/
   margin: auto;
   width: fit-content;
   max-width: 420px;
-  background: #DBA966;
+  background: #dba966;
   padding: 16px;
   border: 2px solid black;
   margin-bottom: 201px;

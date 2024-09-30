@@ -6,7 +6,7 @@
 internos del formulario ademas de su estilo*/
 .distribucionContacto {
     .subtituloContacto {
-        background-color: #884A39;
+        background-color: $colorPrincipal;
         margin: 16px;
         padding: 8px;
         border: 2px solid black;
@@ -30,7 +30,7 @@ internos del formulario ademas de su estilo*/
         margin: auto;
         width: fit-content;
         max-width: 420px;
-        background: #DBA966;
+        background: $colorSecundario;
         padding: 16px;
         border: 2px solid black;
         margin-bottom: 201px;

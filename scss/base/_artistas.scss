@@ -1,9 +1,8 @@
 /*----------------------------------------------*/
 /*| Estilos de la pagina de Artistas Vinculados |*/
 /*----------------------------------------------*/
-
 h1.subtitulo {
-    background-color: #884A39;
+    background-color: $colorPrincipal;
     color: white;
     font-size: 3rem;
     font-family: Montserrat;
@@ -13,7 +12,7 @@ h1.subtitulo {
 }
 
 .subtitulos {
-    background-color: #DBA966;
+    background-color: $colorSecundario;
     border: 2px solid black;
     margin: 8px 16px;
     padding: 8px;
@@ -27,7 +26,7 @@ h1.subtitulo {
     flex-direction: column;
 
     h2 {
-        background-color: #DBA966;
+        background-color: $colorSecundario;
         border: 2px solid black;
         border-bottom: 0;
         text-align: center;
@@ -52,7 +51,7 @@ h1.subtitulo {
     .descripcion {
         p {
             display: inline-block;
-            background-color: #FFBD66;
+            background-color: $colorTerceario;
             border: 2px solid black;
             margin: 0 16px;
             padding: 4px 16px;
@@ -70,7 +69,7 @@ h1.subtitulo {
 
 
     .discografia ul {
-        background-color: #FFBD66;
+        background-color: $colorTerceario;
         margin-top: 0;
         list-style: none;
         border: 2px solid black;
@@ -86,7 +85,7 @@ h1.subtitulo {
     .redes .redesArtista {
         display: flex;
         flex-direction: row;
-        background-color: #FFBD66;
+        background-color: $colorTerceario;
         border: 2px solid black;
         padding: 8px;
         justify-content: space-evenly;
@@ -110,7 +109,7 @@ h1.subtitulo {
     /*Nombre y Foto del Artista*/
     .fichaArtista {
         h2 {
-            background-color: #DBA966;
+            background-color: $colorSecundario;
             border: 2px solid black;
             border-bottom: 0;
             text-align: center;
@@ -154,7 +153,7 @@ h1.subtitulo {
 
         ul {
             display: block;
-            background-color: #FFBD66;
+            background-color: $colorTerceario;
             list-style: none;
             margin-top: 0;
             border: 2px solid black;

@@ -1,11 +1,12 @@
+@import "../utilities/variables";
 /* Estilos Body */
 body {
-    background-image: linear-gradient(to bottom right, #C38154, #d47f47d3);
+    background-image: $colorFondo;
 }
 
 /* Estilos de Header*/
 header {
-    background-color: #884a39;
+    background-color: $colorPrincipal;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,7 +80,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #884a39;
+    background-color: $colorPrincipal;
 
     p {
         color: white;
@@ -118,7 +119,7 @@ footer {
 
     /* Estilos Header */
     header {
-        background-color: #884a39;
+        background-color: $colorPrincipal;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -174,7 +175,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        background-color: #884a39;
+        background-color: $colorPrincipal;
 
         p {
             color: white;

@@ -44,7 +44,7 @@
     grid-area: encargo;
     max-width: 440px;
     margin: 8px;
-    background-color: #DBA966;
+    background-color: $colorSecundario;
     border: 2px solid black;
     z-index: 4;
 
@@ -118,7 +118,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #DBA966;
+    background-color: $colorSecundario;
     border: 2px solid black;
     margin: 0 8px;
 
@@ -140,7 +140,7 @@
 
                 &:hover {
                     color: #fff;
-                    background-color: #884a39;
+                    background-color: $colorPrincipal;
                     padding: 4px;
                     transition: ease-in-out 0.2s;
                 }
@@ -155,7 +155,7 @@
 .subtituloDisco,
 .subtituloRopa,
 .subtituloPosters {
-    background-color: #884A39;
+    background-color: $colorPrincipal;
     color: white;
     border: 2px solid black;
     font-size: 2rem;
@@ -177,7 +177,7 @@
 
 /*Estilos de las tarjetas del Catalogo*/
 .tarjetaDisco {
-    background-color: #ffbd66;
+    background-color: $colorTerceario;
     display: inline-block;
     border-radius: 12px;
     height: 324px;
@@ -454,7 +454,7 @@
         max-width: 440px;
         margin-left: 8px;
         padding: 16px;
-        background-color: #DBA966;
+        background-color: $colorSecundario;
         border: 2px solid black;
         z-index: 4;
 
@@ -517,7 +517,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: #DBA966;
+        background-color: $colorSecundario;
         border: 2px solid black;
         margin-right: 16px;
 
@@ -544,7 +544,7 @@
     .subtituloDisco,
     .subtituloRopa,
     .subtituloPosters {
-        background-color: #884A39;
+        background-color: $colorPrincipal;
         color: white;
         border: 2px solid black;
         font-size: 2rem;

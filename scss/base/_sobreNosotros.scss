@@ -5,7 +5,7 @@
 .horarios,
 .ubicacion {
     display: inline-block;
-    background-color: #ffbd66;
+    background-color: $colorTerceario;
     text-align: center;
     margin: 24px;
 }
@@ -36,7 +36,7 @@
 
 /*subtitulo que acompaña la historia de la pagina*/
 .subtitulosSobreNosotros {
-    background-color: #DBA966;
+    background-color: $colorSecundario;
     margin: 0;
     padding: 16px;
     border-bottom: 2px solid black;
@@ -44,7 +44,7 @@
 
 /*subtitulo que acompaña la tabla de horarios*/
 .subtitulosSobreNosotrosHor {
-    background-color: #DBA966;
+    background-color: $colorSecundario;
     margin: 0px;
     padding: 8px;
     border-left: 2px solid black;
@@ -54,7 +54,7 @@
 
 /*subtitulo que acompaña la ubicacion*/
 .subtitulosSobreNosotrosUbi {
-    background-color: #DBA966;
+    background-color: $colorSecundario;
     margin: 0;
     border: 2px solid black;
 }
