@@ -1,0 +1,294 @@
+/*----------------------------------------------*/
+/*| Estilos de la pagina de Artistas Vinculados |*/
+/*----------------------------------------------*/
+
+h1.subtitulo {
+    background-color: #884A39;
+    color: white;
+    font-size: 3rem;
+    font-family: Montserrat;
+    text-align: center;
+    margin: 8px 16px;
+    border: 2px solid black;
+}
+
+.subtitulos {
+    background-color: #DBA966;
+    border: 2px solid black;
+    margin: 8px 16px;
+    padding: 8px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/*Nombre y Foto del Artista*/
+.fichaArtista {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        background-color: #DBA966;
+        border: 2px solid black;
+        border-bottom: 0;
+        text-align: center;
+        margin: 4px 4px 0 4px;
+        padding: 2px;
+    }
+
+    img {
+        margin: 0 4px 4px 4px;
+        border: 2px solid black;
+        align-items: center;
+    }
+}
+
+/*Articulo que incluye descripcion, discografia y redes sociales del artista*/
+.informacion {
+    h3 {
+        margin-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .descripcion {
+        p {
+            display: inline-block;
+            background-color: #FFBD66;
+            border: 2px solid black;
+            margin: 0 16px;
+            padding: 4px 16px;
+        }
+
+        span {
+            display: block;
+            margin: 12px 4px;
+            font-family: Montserrat;
+            font-size: 1rem;
+        }
+    }
+
+
+
+
+    .discografia ul {
+        background-color: #FFBD66;
+        margin-top: 0;
+        list-style: none;
+        border: 2px solid black;
+        margin: 0 16px;
+        padding: 8px 16px;
+
+        li {
+            text-align: center;
+            font-family: Montserrat;
+        }
+    }
+
+    .redes .redesArtista {
+        display: flex;
+        flex-direction: row;
+        background-color: #FFBD66;
+        border: 2px solid black;
+        padding: 8px;
+        justify-content: space-evenly;
+        margin: 0 16px;
+
+        a img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+/*Bloque con inserts de Spotify con los discos del artista*/
+.discosSpotify {
+    display: none;
+}
+
+/*Media Query Artistas Vinculados (Tablet)*/
+/*Nombre y Foto del Artista*/
+.fichaArtista {
+    h2 {
+        background-color: #DBA966;
+        border: 2px solid black;
+        border-bottom: 0;
+        text-align: center;
+        margin: 4px 4px 0 4px;
+        padding: 2px;
+    }
+
+    img {
+        margin: 0 4px 4px 4px;
+        border: 2px solid black;
+        align-items: center;
+        height: 600px;
+    }
+}
+
+/*Informacion Artista*/
+/*Descripcion, discografia y redes*/
+.informacion {
+    .descripcion span {
+        display: block;
+        margin: 12px 4px;
+        font-family: Montserrat;
+        font-size: 1.3rem;
+    }
+
+    .discografia ul li {
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1.3rem;
+    }
+}
+
+/*Discos Spotify*/
+.discosSpotify {
+    display: inline;
+
+    .subtitulos {
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    ul {
+        display: block;
+        background-color: #FFBD66;
+        list-style: none;
+        margin-top: 0;
+        border: 2px solid black;
+        padding-left: 0;
+        margin: 0 16px;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px;
+        }
+
+    }
+
+
+}
+
+/*Estilos Artistas Vinculados*/
+/*Estilos de la pagina de Artistas Vinculados*/
+
+.fichaArtista {
+    margin-left: 14px;
+
+    h2 {
+        width: 100%;
+    }
+
+    img {
+        margin: 0 4px 4px 4px;
+        border: 2px solid black;
+        align-items: center;
+        width: 100%;
+        height: 740px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .distribucionArtistasVinculados {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .informacion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .descripcion {
+            p {
+                margin: 0 16px;
+                padding: 4px 16px;
+            }
+
+            span {
+                margin: 12px 4px;
+                font-size: 1.58rem;
+            }
+        }
+    }
+
+    .discosSpotify ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+    }
+}
+
+@media (min-width:1600px) {
+    /*Estilos Artistas Vinculados*/
+    /*Estilos de la pagina de Artistas Vinculados*/
+    /*Nombre y Foto Artista*/
+    .fichaArtista {
+        margin-left: 14px;
+
+        h2 {
+            width: 100%;
+        }
+
+        img {
+            margin: 0 4px 4px 4px;
+            border: 2px solid black;
+            align-items: center;
+            width: 100%;
+            height: 740px;
+        }
+    }
+    /*Distribucion de los elementos*/
+    .distribucionArtistasVinculados {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 42px
+    }
+    /*Informacion (descripcion, discografia y redes)*/
+    .informacion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .discografia {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            height: 84%;
+        }
+
+        .discografia .redes .redesArtista {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 84%;
+        }
+
+        .descripcion {
+            p {
+                margin: 0 16px;
+                padding: 4px 16px;
+            }
+            span {
+                margin: 12px 4px;
+                font-size: 1.44rem;
+            }
+        }
+    }
+    /*Insert de albumes del artista*/
+    .discosSpotify {
+        align-items: start;
+        margin-right: 36px;
+        ul li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px;
+        }
+    
+    }
+
+
+
+}

@@ -1,0 +1,131 @@
+/*----------------------------------------------*/
+/*|        Estilos de la pagina Galeria        |*/
+/*----------------------------------------------*/
+
+.vid {
+    width: 100%;
+    height: 200px;
+    margin: 8px auto;
+}
+
+.contenedorFotos,
+.contenedorVideos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.contenedorFotos img {
+    background-color: #FFBD66;
+    border: 2px solid black;
+    border-radius: 5%;
+    padding: 8px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.contenedorVideos video {
+    background-color: #FFBD66;
+    border: 2px solid black;
+    border-radius: 5%;
+    padding: 8px;
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.logoPgLang,
+.logoHillbillies {
+    display: none;
+}
+
+/*Media Query Galeria (tablet)*/
+@media (min-width: 600px) {
+    .vid {
+        height: 450px;
+    }
+
+    .contenedorFotos,
+    .contenedorVideos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contenedorFotos img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contenedorVideos video {
+        width: 350px;
+        height: 250px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    /*Media Query Estilos Galeria (Laptop)*/
+    .vid {
+        height: 600px;
+    }
+
+    .contenedorFotos,
+    .contenedorVideos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logoHillbillies {
+        display: inline-block;
+    }
+
+    .logoPgLang {
+        display: inline-block;
+        background-color: #FFBD66;
+        border: 2px solid black;
+        border-radius: 5%;
+        padding: 8px;
+        width: 350px;
+        height: 250px;
+        margin: auto;
+    }
+
+    .contenedorFotos img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contenedorVideos video {
+        width: 350px;
+        height: 250px;
+    }
+
+}
+
+/*Media Query Galeria (Desktop/Torre)*/
+@media (min-width:1600px){
+    .vid {
+        height: 600px;
+    }
+
+    .contenedorFotos,
+    .contenedorVideos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .logoHillbillies,
+    .logoPgLang {
+        display: none;
+    }
+
+    .contenedorFotos img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .contenedorVideos video {
+        width: 350px;
+        height: 250px;
+    }
+
+}

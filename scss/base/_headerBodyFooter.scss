@@ -1,0 +1,192 @@
+/* Estilos Body */
+body {
+    background-image: linear-gradient(to bottom right, #C38154, #d47f47d3);
+}
+
+/* Estilos de Header*/
+header {
+    background-color: #884a39;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    grid-area: header;
+    text-align: center;
+
+    a img {
+        width: 60%;
+        padding: 4px;
+    }
+
+    nav ul {
+        padding-right: 16px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding-right: 0;
+        list-style: none;
+
+        li a {
+            text-decoration: none;
+
+            &:hover {
+                padding: 4px;
+                background-color: #C38154;
+                transition: ease-in-out 0.2s;
+            }
+        }
+    }
+}
+
+
+
+.ul__li--tamaño {
+    font-family: Montserrat;
+    font-size: 0.9rem;
+}
+
+/*Estilos Menu Hamburguesa y sus Pseudoclases*/
+.menuHamurguesa {
+    color: white;
+}
+
+.menuHamurguesa,
+.button__nav--border {
+    border: none;
+}
+
+.button__nav--border:hover {
+    background-color: #C38154;
+    transition: 0.2s;
+}
+
+.button__nav--border:focus {
+    transform: rotate(90deg);
+    transition: 1s;
+    margin: auto;
+}
+
+/*Estilos del Footer*/
+footer {
+    margin-top: 16px;
+    grid-area: footer;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #884a39;
+
+    p {
+        color: white;
+        padding: 12px 0 0 4px;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .redesSociales a img {
+        width: 28px;
+        padding-right: 4px;
+    }
+}
+
+/* Media Querys (Tablet)*/
+@media (min-width: 600px) {
+
+    /*Footer*/
+    footer div.redesSociales a img {
+        width: 40px;
+        padding-right: 8px;
+    }
+}
+
+/*Media Querys (Laptop)*/
+@media (min-width: 1024px) {
+
+    /*Estilos header*/
+    header {
+        margin-bottom: 12px;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    /* Estilos Header */
+    header {
+        background-color: #884a39;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4px;
+        grid-area: header;
+
+        a img {
+            padding: 4px;
+            width: 45%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 24px;
+            padding-right: 16px;
+            list-style: none;
+
+            li a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .ul__li--tamaño {
+        font-family: Montserrat;
+        font-size: 0.9rem;
+    }
+
+    span.ico {
+        height: 10px;
+        width: 10px;
+    }
+
+    .menuHamurguesa {
+        color: white;
+    }
+
+    .menuHamurguesa,
+    .button__nav--border {
+        border: none;
+    }
+
+    /*Footer (Desktop/Torre)*/
+    /* Estilos Footer*/
+    footer {
+        margin-top: 16px;
+        grid-area: footer;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background-color: #884a39;
+
+        p {
+            color: white;
+            padding: 12px 0 0 4px;
+            align-items: center;
+        }
+
+        div.redesSociales a img {
+            width: 34px;
+            padding-right: 8px;
+        }
+
+    }
+
+}

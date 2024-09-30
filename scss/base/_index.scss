@@ -1,0 +1,622 @@
+/*----------------------------------------------*/
+/*|    Estilos de la pagina Index (Catalogo)    |*/
+/*----------------------------------------------*/
+
+/*Estilos de la Hero section y Carrusel de Imagenes*/
+.hero {
+    width: 100%;
+    height: 200px;
+    grid-area: hero;
+    margin-top: -12px;
+
+    img {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+.textos {
+    display: none
+}
+
+/* Grilla de Distribucion del Catalogo*/
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "hero"
+        "lista"
+        "subDisco"
+        "disco"
+        "subRopa"
+        "ropa"
+        "subPosters"
+        "posters"
+        "encargo"
+        "footer";
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+
+/*Distribucion de elementos del Catalogo*/
+/*Estilos del Formulario de encargo de disco*/
+.encargoDisco {
+    grid-area: encargo;
+    max-width: 440px;
+    margin: 8px;
+    background-color: #DBA966;
+    border: 2px solid black;
+    z-index: 4;
+
+    h2 {
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-size: 1rem;
+        margin: 4px 8px 0 0;
+        justify-content: center;
+        align-items: center;
+        text-align: end;
+    }
+
+    input {
+        margin: 0 8px 4px 0;
+        height: 32px;
+
+        &:hover {
+            border: 2px solid rgb(224, 108, 0);
+        }
+
+        &:focus:placeholder-shown {
+            background-color: #ffd4abe7;
+        }
+    }
+}
+
+/*Distribucion Interna del formulario y estilos de los botones*/
+.elemento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.botones button {
+    padding: 4px;
+    margin: 4px 12px 4px 0;
+    border-radius: 20px;
+
+    &:hover {
+        transform: translate(0px, -4px);
+        box-shadow: 0px 6px 10px #b16400;
+    }
+
+    &:active {
+        background-color: rgb(211, 211, 211);
+    }
+}
+
+/*Estilos Flecha para regresar hacia arriba de la pagina*/
+.flechaSubir {
+    display: none;
+}
+
+/*Estilos de la lista que actua como indice del catalogo y su Hover*/
+.lista {
+    grid-area: lista;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #DBA966;
+    border: 2px solid black;
+    margin: 0 8px;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        padding-left: 0;
+        margin-top: 16px;
+
+        li {
+            font-size: 1.5rem;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: #fff;
+                    background-color: #884a39;
+                    padding: 4px;
+                    transition: ease-in-out 0.2s;
+                }
+            }
+
+
+        }
+    }
+}
+
+/*Estilos subtitulos que encabezan elementos del catalogo*/
+.subtituloDisco,
+.subtituloRopa,
+.subtituloPosters {
+    background-color: #884A39;
+    color: white;
+    border: 2px solid black;
+    font-size: 2rem;
+    text-align: center;
+    padding: 8px;
+    margin: 0 4px;
+}
+
+.subtituloDisco {
+    grid-area: subDisco;
+}
+
+/*Formato del Catalogo*/
+.catalogo {
+    grid-area: disco;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*Estilos de las tarjetas del Catalogo*/
+.tarjetaDisco {
+    background-color: #ffbd66;
+    display: inline-block;
+    border-radius: 12px;
+    height: 324px;
+    width: 240px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 8px auto;
+
+    img {
+        width: 100%;
+        height: 180px;
+        padding: 8px 16px;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .precio {
+        color: rgb(255, 0, 0);
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+
+    &:hover {
+        background-color: #f0b537e0;
+        box-shadow: 0px 16px 10px rgb(218, 99, 20);
+        border: 4px solid rgb(255, 255, 255);
+        transform: scale(1.2, 1.2);
+        margin: 7vh auto;
+        transition: .5s;
+    }
+
+}
+
+.subtituloRopa {
+    grid-area: subRopa;
+}
+
+.ropa {
+    grid-area: ropa;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.subtituloPosters {
+    grid-area: subPosters;
+}
+
+.posters {
+    grid-area: posters;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*Media Queries Index (Catalogo)*/
+@media (min-width:600px) {
+
+    /*Grid Area de la distribucion del catalogo*/
+    #grilla {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "hero hero"
+            "lista lista"
+            "subDisco subDisco"
+            "disco disco"
+            "subRopa subRopa"
+            "ropa ropa"
+            "subPosters subPosters"
+            "posters posters"
+            "encargo encargo"
+            "footer footer";
+    }
+
+    /*Estilos de la hero section (Carrusel de imagenes)*/
+    .hero {
+        margin-top: -12px;
+        height: 300px;
+
+        img {
+            height: 300px;
+        }
+    }
+
+    /*Distribucion de Catalogo*/
+
+    /*Formulario de encargo de disco*/
+    .encargoDisco {
+        margin: auto;
+
+        label {
+            font-size: 1.2rem;
+        }
+
+        input {
+            height: 38px;
+        }
+    }
+
+    /*estilos del catalogo*/
+    /*Secciones discos, ropa y posters*/
+    .catalogo,
+    .ropa,
+    .posters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tarjetaDisco {
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+
+        .precio {
+            font-size: 1.1rem;
+        }
+
+
+    }
+}
+
+/*Media Query Index (Catalogo) (Laptop)*/
+@media (min-width:1024px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "lista lista lista"
+            "subDisco subDisco subDisco"
+            "disco disco disco"
+            "subRopa subRopa subRopa"
+            "ropa ropa ropa"
+            "subPosters subPosters subPosters"
+            "posters posters posters"
+            "encargo encargo encargo"
+            "footer footer footer";
+        ;
+    }
+
+    /*Estilos de la hero section (Carrusel de imagenes)*/
+    .hero {
+        height: 400px;
+
+        img {
+            height: 400px;
+        }
+
+    }
+
+    .heroIndex {
+        margin-top: -18px;
+    }
+
+    .textos {
+        display: inline-block;
+        position: absolute;
+        top: 110px;
+        left: 30px;
+        text-align: center;
+        color: white;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    span.nombrePag {
+        color: #FF8800;
+        display: inline;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /*Estilos flecha subir*/
+    .flechaSubir {
+        display: inline-block;
+        grid-area: flecha;
+        position: fixed;
+        bottom: 60px;
+        margin-left: 6px;
+    }
+
+    .flecha {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    /*Distribucion de Catalogo*/
+    /*Secciones discos, ropa y posters*/
+    .catalogo,
+    .ropa,
+    .posters {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:1600px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "hero hero hero"
+            "encargo lista lista"
+            "flecha subDisco subDisco"
+            "flecha disco disco"
+            "flecha subRopa subRopa"
+            "flecha ropa ropa"
+            "flecha subPosters subPosters"
+            "flecha posters posters"
+            "footer footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 12px;
+    }
+
+    /*Estilos de la hero section (Carrusel de imagenes)*/
+    .hero {
+        height: 600px;
+        grid-area: hero;
+
+        img {
+            height: 600px;
+        }
+
+    }
+
+    .heroIndex {
+        margin-top: -24px;
+    }
+
+    .textos {
+        display: inline-block;
+        position: absolute;
+        top: 185px;
+        left: 190px;
+        text-align: center;
+        color: white;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    span.nombrePag {
+        color: #FF8800;
+        display: inline;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    /*Distribucion de Catalogo*/
+    /*Formulario de encargo de disco*/
+    .encargoDisco {
+        grid-area: encargo;
+        position: sticky;
+        top: 400px;
+        max-width: 440px;
+        margin-left: 8px;
+        padding: 16px;
+        background-color: #DBA966;
+        border: 2px solid black;
+        z-index: 4;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 1.1rem;
+            margin: 0 4px 4px 0;
+            justify-content: center;
+            text-align: end;
+        }
+
+        input {
+            margin: 0 4px 4px 0;
+            height: 32px;
+        }
+    }
+
+    /*Distribucion interna del formulario y estilos de los botones*/
+    .elemento {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+
+        button {
+            padding: 6px;
+            margin: 16px 4px 0 0;
+            border-radius: 20px;
+        }
+    }
+
+    /*Estilos Flecha (para regresar a arriba de la pagina)*/
+    .flechaSubir {
+        grid-area: flecha;
+        position: fixed;
+        bottom: 100px;
+        margin-left: 16px;
+    }
+
+    .flecha {
+        width: 60px;
+        height: 60px;
+    }
+
+    /*Estilos de la lista que actua como indice del catalogo*/
+    .lista {
+        grid-area: lista;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #DBA966;
+        border: 2px solid black;
+        margin-right: 16px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            text-align: end;
+
+            li {
+                font-size: 1.5rem;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    /*Estilos subtitulos que encabezan elementos del catalogo*/
+    .subtituloDisco,
+    .subtituloRopa,
+    .subtituloPosters {
+        background-color: #884A39;
+        color: white;
+        border: 2px solid black;
+        font-size: 2rem;
+        text-align: center;
+        padding: 16px;
+        margin-right: 16px;
+    }
+
+    .subtituloDisco {
+        grid-area: subDisco;
+    }
+
+    .catalogo {
+        grid-area: disco;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .tarjetaDisco {
+        margin: 0 0 24px 52px;
+
+        &:hover {
+            transform: scale(1.2, 1.2);
+            margin: 3vh auto 8vh auto;
+            transition: .5s;
+
+        }
+
+        img {
+            width: 100%;
+            height: 180px;
+            padding: 12px;
+        }
+
+        div.distribucion section.discos article img {
+            width: 240px;
+            height: 180px;
+            padding: 8px;
+        }
+
+        .subtituloRopa {
+            grid-area: subRopa;
+        }
+
+        .ropa {
+            grid-area: ropa;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .subtituloPosters {
+            grid-area: subPosters;
+        }
+
+        .posters {
+            grid-area: posters;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
