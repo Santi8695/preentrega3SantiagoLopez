@@ -30,6 +30,7 @@ header nav ul {
   padding-right: 16px;
   list-style: none;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -78,6 +79,7 @@ footer {
   position: relative;
   bottom: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -115,6 +117,7 @@ footer .redesSociales a img {
   header {
     background-color: #884a39;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 4px;
@@ -126,6 +129,7 @@ footer .redesSociales a img {
   }
   header nav ul {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     gap: 24px;
@@ -158,6 +162,7 @@ footer .redesSociales a img {
     position: relative;
     bottom: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -240,6 +245,7 @@ footer .redesSociales a img {
 .elemento {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
 }
 
 .botones {
@@ -321,6 +327,7 @@ footer .redesSociales a img {
   grid-area: disco;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 /*Estilos de las tarjetas del Catalogo*/
@@ -367,6 +374,7 @@ footer .redesSociales a img {
   grid-area: ropa;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 .subtituloPosters {
@@ -377,6 +385,7 @@ footer .redesSociales a img {
   grid-area: posters;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 /*Media Queries Index (Catalogo)*/
@@ -410,7 +419,9 @@ footer .redesSociales a img {
   .catalogo,
   .ropa,
   .posters {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .tarjetaDisco h4 {
     font-size: 1.5rem;
@@ -475,7 +486,9 @@ footer .redesSociales a img {
   .catalogo,
   .ropa,
   .posters {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
   }
 }
 @media (min-width: 1600px) {
@@ -550,6 +563,7 @@ footer .redesSociales a img {
   .elemento {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .botones {
     display: flex;
@@ -748,6 +762,10 @@ h1.subtitulo {
 /*Media Query Artistas Vinculados (Tablet)*/
 @media (min-width: 600px) {
   /*Nombre y Foto del Artista*/
+  .fichaArtista {
+    display: inline-block;
+    margin: auto;
+  }
   .fichaArtista h2 {
     background-color: #dba966;
     border: 2px solid black;
@@ -818,10 +836,12 @@ h1.subtitulo {
   .distribucionArtistasVinculados {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .informacion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .informacion .descripcion p {
     margin: 0 16px;
@@ -859,16 +879,19 @@ h1.subtitulo {
   .distribucionArtistasVinculados {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     gap: 42px;
   }
   /*Informacion (descripcion, discografia y redes)*/
   .informacion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .informacion .discografia {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     height: 84%;
   }
   .informacion .discografia .redes .redesArtista {
@@ -911,6 +934,7 @@ h1.subtitulo {
 .contenedorVideos {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   gap: 16px;
 }
 
@@ -946,7 +970,9 @@ h1.subtitulo {
   }
   .contenedorFotos,
   .contenedorVideos {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .contenedorFotos img {
     width: 350px;
@@ -964,7 +990,9 @@ h1.subtitulo {
   }
   .contenedorFotos,
   .contenedorVideos {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
   }
   .logoHillbillies {
     display: inline-block;
@@ -995,7 +1023,9 @@ h1.subtitulo {
   }
   .contenedorFotos,
   .contenedorVideos {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
   .logoHillbillies,
   .logoPgLang {
@@ -1084,6 +1114,8 @@ table tr td {
 
 .ubicacion {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 .ubicacion iframe {
   width: 100%;
@@ -1140,6 +1172,8 @@ table tr td {
   }
   .ubicacion {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
   .slogan h3 {
     font-size: 2.2rem;
@@ -1171,6 +1205,8 @@ table tr td {
   }
   .ubicacion {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
   .slogan h3 {
     font-size: 2.4rem;
@@ -1219,6 +1255,7 @@ internos del formulario ademas de su estilo*/
 .distribucionContacto .elemento {
   display: grid;
   grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr;
   margin-top: 20px;
 }
 .distribucionContacto label {
@@ -1246,6 +1283,7 @@ internos del formulario ademas de su estilo*/
 .distribucionContacto .area {
   display: grid;
   grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr;
   margin-top: 20px;
 }
 .distribucionContacto textarea {

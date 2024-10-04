@@ -11,7 +11,7 @@
 }
 
 .historia {
-    border: 2px solid black;
+    border: 2px solid $bordes;
 
     p {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -39,7 +39,7 @@
     background-color: $colorSecundario;
     margin: 0;
     padding: 16px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid $bordes;
 }
 
 /*subtitulo que acompaña la tabla de horarios*/
@@ -47,27 +47,27 @@
     background-color: $colorSecundario;
     margin: 0px;
     padding: 8px;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
+    border-left: 2px solid $bordes;
+    border-right: 2px solid $bordes;
+    border-top: 2px solid $bordes;
 }
 
 /*subtitulo que acompaña la ubicacion*/
 .subtitulosSobreNosotrosUbi {
     background-color: $colorSecundario;
     margin: 0;
-    border: 2px solid black;
+    border: 2px solid $bordes;
 }
 
 /*Estilos de la Tabla de Horarios*/
 table {
-    border: 2px solid black;
+    border: 2px solid $bordes;
     margin: auto;
     width: 300px;
 
     tr td {
-        border: 1px solid black;
-        fill: black;
+        border: 1px solid $bordes;
+        fill: $bordes;
         text-align: center;
         padding: 2px;
         font-size: 0.6rem;
@@ -75,7 +75,7 @@ table {
 }
 
 .ubicacion {
-    display: grid;
+    @include grid (1fr, 1fr);
 
     iframe {
         width: 100%;
@@ -84,18 +84,17 @@ table {
 }
 
 .slogan {
-    display: flex;
-    flex-direction: column;
+    @include flex (column);
 
     h3 {
-        color: white;
+        color: $texto;
         text-align: center;
         font-size: 2rem;
         margin: 0 2px 4px 2px;
     }
 
     h4 {
-        color: white;
+        color: $texto;
         text-align: center;
         text-decoration: underline;
     }
@@ -112,8 +111,7 @@ table {
 
     /*Tabla de Horarios*/
     .horarios {
-        display: flex;
-        flex-direction: column;
+        @include flex (column);
         margin: 2px auto;
         width: 90%;
     }
@@ -142,7 +140,7 @@ table {
     }
 
     .ubicacion {
-        display: grid;
+        @include grid (1fr, 1fr);
     }
 
     .slogan h3 {
@@ -157,8 +155,7 @@ table {
 @media (min-width:1024px){
      /*Estilos Sobre Nosotros*/
      .horarios {
-        display: flex;
-        flex-direction: column;
+        @include flex (column);
         margin: 0 auto;
     }
 
@@ -179,7 +176,7 @@ table {
     }
 
     .ubicacion {
-        display: grid;
+        @include grid (1fr, 1fr);
     }
 
     .slogan {

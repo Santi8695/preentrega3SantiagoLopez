@@ -1,0 +1,15 @@
+//Este Mixin define los flex y toma como parametro una direccion.
+//Por ejemplo, yo use column o row dependiendo de lo que queria lograr.
+@mixin flex ($direccion){
+    display: flex;
+    flex-direction: $direccion;
+}
+
+//Este otro Mixin define los grids, en este caso toma como parametros lo que luego define a las filas y columnas.
+//Por ejemplo si $columna = repeat(2, 1fr) y $fila = 1fr 
+//seria lo mismo que tener grid-template-columns:repeat(2,1fr); y grid-template-rows:1fr;
+@mixin grid ($columna, $fila){
+    display: grid;
+    grid-template-columns:$columna;
+    grid-template-rows:$fila;
+}

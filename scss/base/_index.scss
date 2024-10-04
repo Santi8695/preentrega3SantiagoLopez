@@ -45,7 +45,7 @@
     max-width: 440px;
     margin: 8px;
     background-color: $colorSecundario;
-    border: 2px solid black;
+    border: 2px solid $bordes;
     z-index: 4;
 
     h2 {
@@ -54,8 +54,7 @@
     }
 
     form {
-        display: flex;
-        flex-direction: column;
+        @include flex (column);
     }
 
     label {
@@ -82,13 +81,12 @@
 
 /*Distribucion Interna del formulario y estilos de los botones*/
 .elemento {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid (repeat(2, 1fr), 1fr);
+
 }
 
 .botones {
-    display: flex;
-    flex-direction: row;
+    @include flex (row);
     justify-content: end;
 }
 
@@ -115,16 +113,14 @@
 /*Estilos de la lista que actua como indice del catalogo y su Hover*/
 .lista {
     grid-area: lista;
-    display: flex;
-    flex-direction: column;
+    @include flex (column);
     justify-content: center;
     background-color: $colorSecundario;
-    border: 2px solid black;
+    border: 2px solid $bordes;
     margin: 0 8px;
 
     ul {
-        display: flex;
-        flex-direction: column;
+        @include flex (column);
         align-items: center;
         justify-content: center;
         list-style: none;
@@ -136,7 +132,7 @@
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $bordes;
 
                 &:hover {
                     color: #fff;
@@ -156,8 +152,8 @@
 .subtituloRopa,
 .subtituloPosters {
     background-color: $colorPrincipal;
-    color: white;
-    border: 2px solid black;
+    color: $texto;
+    border: 2px solid $bordes;
     font-size: 2rem;
     text-align: center;
     padding: 8px;
@@ -171,8 +167,8 @@
 /*Formato del Catalogo*/
 .catalogo {
     grid-area: disco;
-    display: grid;
-    grid-template-columns: 1fr;
+    @include grid (1fr, 1fr);
+
 }
 
 /*Estilos de las tarjetas del Catalogo*/
@@ -182,7 +178,7 @@
     border-radius: 12px;
     height: 324px;
     width: 240px;
-    border: 2px solid black;
+    border: 2px solid $bordes;
     text-align: center;
     margin: 8px auto;
 
@@ -223,8 +219,8 @@
 
 .ropa {
     grid-area: ropa;
-    display: grid;
-    grid-template-columns: 1fr;
+    @include grid (1fr, 1fr);
+
 }
 
 .subtituloPosters {
@@ -233,8 +229,7 @@
 
 .posters {
     grid-area: posters;
-    display: grid;
-    grid-template-columns: 1fr;
+    @include grid (1fr, 1fr);
 }
 
 /*Media Queries Index (Catalogo)*/
@@ -287,7 +282,7 @@
     .catalogo,
     .ropa,
     .posters {
-        grid-template-columns: repeat(2, 1fr);
+        @include grid (repeat(2, 1fr),1fr);
     }
 
     .tarjetaDisco {
@@ -346,7 +341,7 @@
         top: 110px;
         left: 30px;
         text-align: center;
-        color: white;
+        color: $texto;
 
         h1 {
             font-size: 2.2rem;
@@ -384,7 +379,7 @@
     .catalogo,
     .ropa,
     .posters {
-        grid-template-columns: repeat(3, 1fr);
+        @include grid (repeat(3, 1fr), 1fr);
     }
 }
 
@@ -427,7 +422,7 @@
         top: 185px;
         left: 190px;
         text-align: center;
-        color: white;
+        color: $texto;
 
         h1 {
             font-size: 3rem;
@@ -455,7 +450,7 @@
         margin-left: 8px;
         padding: 16px;
         background-color: $colorSecundario;
-        border: 2px solid black;
+        border: 2px solid $bordes;
         z-index: 4;
 
         h2 {
@@ -463,8 +458,7 @@
         }
 
         form {
-            display: flex;
-            flex-direction: column;
+            @include flex (column);
         }
 
         label {
@@ -482,13 +476,12 @@
 
     /*Distribucion interna del formulario y estilos de los botones*/
     .elemento {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        @include grid (repeat(2, 1fr),1fr);
+
     }
 
     .botones {
-        display: flex;
-        flex-direction: row;
+        @include flex (row);
         justify-content: end;
 
         button {
@@ -514,16 +507,14 @@
     /*Estilos de la lista que actua como indice del catalogo*/
     .lista {
         grid-area: lista;
-        display: flex;
-        flex-direction: column;
+        @include flex (column);
         justify-content: center;
         background-color: $colorSecundario;
-        border: 2px solid black;
+        border: 2px solid $bordes;
         margin-right: 16px;
 
         ul {
-            display: flex;
-            flex-direction: column;
+            @include flex (column);
             align-items: center;
             justify-content: center;
             list-style: none;
@@ -534,7 +525,7 @@
 
                 a {
                     text-decoration: none;
-                    color: black;
+                    color: $bordes;
                 }
             }
         }
@@ -545,8 +536,8 @@
     .subtituloRopa,
     .subtituloPosters {
         background-color: $colorPrincipal;
-        color: white;
-        border: 2px solid black;
+        color: $texto;
+        border: 2px solid $bordes;
         font-size: 2rem;
         text-align: center;
         padding: 16px;
@@ -559,9 +550,7 @@
 
     .catalogo {
         grid-area: disco;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        @include grid (repeat(4, 1fr), repeat(3, 1fr));
     }
 
     .tarjetaDisco {
@@ -592,9 +581,7 @@
 
         .ropa {
             grid-area: ropa;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            @include grid (repeat(4, 1fr), repeat(3, 1fr));
         }
 
         .subtituloPosters {
@@ -603,9 +590,7 @@
 
         .posters {
             grid-area: posters;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            @include grid (repeat(4, 1fr), repeat(3, 1fr));
         }
     }
 
